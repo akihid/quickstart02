@@ -23,7 +23,8 @@ class TaskController extends Controller
 
     $task = new Task;
     $task->name = $request->name;
-    $task->save;
+    // save;だと登録されない
+    $task->save();
 
     return redirect('/tasks');
   }
